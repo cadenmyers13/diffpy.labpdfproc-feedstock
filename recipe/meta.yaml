@@ -30,7 +30,6 @@ requirements:
     - diffpy.utils
     - pandas
     - scipy
-    - gooey
 
 test:
   requires:
