@@ -1,14 +1,14 @@
 {% set name = "diffpy.labpdfproc" %}
-{% set version = "0.3.0" %}
-{% set python_min = "3.11" %}
+{% set version = "0.3.1" %}
+{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/d/diffpy_labpdfproc/diffpy_labpdfproc-{{ version }}.tar.gz
-  sha256: c8d4a54c323592704d20257ae2efb904fd6fc70efed13e5d2e94f378760ea9af
+  url: https://pypi.org/packages/source/d/diffpy_labpdfproc/diffpy_labpdfproc-0.3.1.tar.gz
+  sha256: 7cc4e1a8bdb33ccb26a47b18a89ff0fd93dc0cc4d09c1cf0faf720b772bf959f
 
 build:
   noarch: python
