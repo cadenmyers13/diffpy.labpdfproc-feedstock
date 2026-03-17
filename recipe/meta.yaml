@@ -7,7 +7,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/d/diffpy_labpdfproc/diffpy_labpdfproc-0.3.1.tar.gz
+  url: hhttps://pypi.org/packages/source/d/diffpy_labpdfproc/diffpy_labpdfproc-{{ version }}.tar.gz
   sha256: 7cc4e1a8bdb33ccb26a47b18a89ff0fd93dc0cc4d09c1cf0faf720b772bf959f
 
 build:
