@@ -1,13 +1,14 @@
 {% set name = "diffpy.labpdfproc" %}
-{% set version = "0.2.0" %}
+{% set version = "0.3.1" %}
+{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/d/diffpy_labpdfproc/diffpy_labpdfproc-{{ version }}.tar.gz
-  sha256: 1b469a2eded18fd4ed9f7d6243bee0e761c6ae506e87a46ce3e2fde950c4e441
+  url: https://pypi.org/packages/source/d/diffpy_labpdfproc/diffpy_labpdfproc-{{ version }}.tar.gz
+  sha256: 7cc4e1a8bdb33ccb26a47b18a89ff0fd93dc0cc4d09c1cf0faf720b772bf959f
 
 build:
   noarch: python
@@ -18,20 +19,22 @@ build:
 
 requirements:
   host:
-    - python >=3.11
+    - python {{ python_min }}
     - setuptools
     - setuptools-git-versioning >=2.0
     - pip
 
   run:
-    - python >=3.11
+    - python >={{ python_min }}
     - numpy
     - diffpy.utils
     - pandas
     - scipy
+    - gooey
 
 test:
   requires:
+    - python {{ python_min }}
     - pip
     - pytest
     - pytest-mock
@@ -59,4 +62,4 @@ extra:
   recipe-maintainers:
     - sbillinge
     - yucongalicechen
-    - bobleesj
+    - cadenmyers13
